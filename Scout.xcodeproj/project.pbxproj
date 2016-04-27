@@ -51,6 +51,8 @@
 		B8F119F81CB5696B004359DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8F119F61CB5696B004359DD /* Main.storyboard */; };
 		B8F119FD1CB5696B004359DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8F119FB1CB5696B004359DD /* LaunchScreen.storyboard */; };
 		B8F11A081CB5696B004359DD /* ScoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F11A071CB5696B004359DD /* ScoutTests.swift */; };
+		C82EC7F91CD138720020DAF0 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82EC7F71CD138720020DAF0 /* MainViewController.swift */; };
+		C82EC7FA1CD138720020DAF0 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C82EC7F81CD138720020DAF0 /* MainViewController.xib */; };
 		C84CF8541CC1F36A00AE9926 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84CF8531CC1F36A00AE9926 /* Constants.swift */; };
 		C84CF85B1CC21CC700AE9926 /* IssueListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84CF8591CC21CC700AE9926 /* IssueListCell.swift */; };
 		C84CF85C1CC21CC700AE9926 /* IssueListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C84CF85A1CC21CC700AE9926 /* IssueListCell.xib */; };
@@ -124,6 +126,8 @@
 		B8F368DC1CB57F0900399591 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		B8F368DE1CB57F1A00399591 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		B8F368E01CB57F2300399591 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		C82EC7F71CD138720020DAF0 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = ViewControllers/Main/MainViewController.swift; sourceTree = "<group>"; };
+		C82EC7F81CD138720020DAF0 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MainViewController.xib; path = ViewControllers/Main/MainViewController.xib; sourceTree = "<group>"; };
 		C84CF8531CC1F36A00AE9926 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C84CF8591CC21CC700AE9926 /* IssueListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IssueListCell.swift; path = ViewControllers/ListIssue/Cell/IssueListCell.swift; sourceTree = "<group>"; };
 		C84CF85A1CC21CC700AE9926 /* IssueListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = IssueListCell.xib; path = ViewControllers/ListIssue/Cell/IssueListCell.xib; sourceTree = "<group>"; };
@@ -169,6 +173,7 @@
 		446C7A151CB614030016604B /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				C82EC7F61CD138510020DAF0 /* Main */,
 				7558C17B1CC339E0004E2712 /* IssueFilter */,
 				C84CF8551CC21B0400AE9926 /* ListIssue */,
 				442345DA1CBDE546007F3865 /* Xibs */,
@@ -312,6 +317,15 @@
 			path = ScoutTests;
 			sourceTree = "<group>";
 		};
+		C82EC7F61CD138510020DAF0 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				C82EC7F71CD138720020DAF0 /* MainViewController.swift */,
+				C82EC7F81CD138720020DAF0 /* MainViewController.xib */,
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
 		C84CF8551CC21B0400AE9926 /* ListIssue */ = {
 			isa = PBXGroup;
 			children = (
@@ -438,6 +452,7 @@
 				446C7A341CB647530016604B /* MoreViewController.xib in Resources */,
 				71BED6D61CC9C5030005A247 /* Circular_Air-Light.ttf in Resources */,
 				B8F119F81CB5696B004359DD /* Main.storyboard in Resources */,
+				C82EC7FA1CD138720020DAF0 /* MainViewController.xib in Resources */,
 				446C7A381CB647690016604B /* IssueDetailsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -563,6 +578,7 @@
 				446C7A3B1CB647B40016604B /* IssueSubmitViewController.swift in Sources */,
 				B8F119F31CB5696A004359DD /* AppDelegate.swift in Sources */,
 				B81BF2DE1CB5702E002A5EF4 /* User.swift in Sources */,
+				C82EC7F91CD138720020DAF0 /* MainViewController.swift in Sources */,
 				7558C1821CC33EF4004E2712 /* IssueFilterViewController.swift in Sources */,
 				B851BEC41CB57BB3006CDE44 /* Comment.swift in Sources */,
 				446C7A4B1CB653300016604B /* IssueMainViewController.swift in Sources */,
