@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import Alamofire
 class IssueListCell: UITableViewCell {
   
   @IBOutlet weak var issueImage: UIImageView!

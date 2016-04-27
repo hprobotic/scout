@@ -7,17 +7,21 @@
 //
 
 import UIKit
-import GoogleMaps
+import MapKit
 class IssueMainViewController: UIViewController {
   
   
-  @IBOutlet weak var mainMapView: UIView!
+  @IBOutlet weak var mapView: MKMapView!
   let cllocationManager: CLLocationManager = CLLocationManager()
   let locationManager = CLLocationManager()
-  var googleMaps: GMSMapView!
+  let regionRadius: CLLocationDistance = 1000
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    let initialLocation = CLLocation(latitude: 21.282778, longitude: -157.829444)
+    
+    centerMapOnLocation(initialLocation)
+    
     
     //Request for location authorization
     //Request location authorization
@@ -33,10 +37,12 @@ class IssueMainViewController: UIViewController {
   //Add Google Maps to the view
   override func viewWillAppear(animated: Bool) {
     super.viewWillAppear(true)
-    self.googleMaps = GMSMapView(frame: self.view.frame)
-    self.view.addSubview(self.googleMaps)
+
   }
-  
+  func centerMapOnLocation(location: CLLocation) {
+    let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate, regionRadius*2, regionRadius*2)
+    mapView.setRegion(coordinateRegion, animated: true)
+  }
   
   func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
     if status == CLAuthorizationStatus.AuthorizedWhenInUse {

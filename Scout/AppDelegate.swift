@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import GoogleMaps
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
   
@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       return false
     }
     BuddyBuildSDK.setup()
-    GMSServices.provideAPIKey(PrivateConfig.GMSApiKey!)
+//    GMSServices.provideAPIKey(PrivateConfig.GMSApiKey!)
     ParserClient.initialize(launchOptions)
     var vc: UIViewController
     if User.localUser != nil {
